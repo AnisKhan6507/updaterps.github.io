@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/672ebe5cba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        Rock, Paper And Scissor
+    </header>
+
+    <div class="scoreboard">
+        <span class="playerScore">0</span>
+        <span class="compScore">0</span>
+    </div>
+
+    <div class="container">
+        <div class="rock"><i class="fa-solid fa-hand-back-fist  fa-2xl" style="color: #47b4ce;"></i></div>
+        <div class="paper"><i class="fa-solid fa-hand fa-2xl" style="color: #47b4ce;"></i></div>
+        <div class="scissor"><i class="fa-solid fa-hand-scissors fa-2xl" style="color: #47b4ce;"></i></div>
+    </div>
+
+    <div class="hero">
+        <span>
+            <span class="winner"></span> <br>
+            <div class="winDisplay">
+        <span class="king"></span> beats <span class="thief"></span>        
+            </div> 
+    </div>
+
+    <div class="displayer"><span class="matchWinner"></span>
+    <button onclick="reset()">restart</button></div>
+</body>
+<script src="index.js"></script>
+</html>

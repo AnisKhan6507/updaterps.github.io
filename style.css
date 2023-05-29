@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* height: 100vh; */
+    background-color: #5fd2ff;
+    overflow-x: hidden;
+    position:relative;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: linear-gradient(#2193b0 , #6dd5ed);
+}
+
+
+header{
+    background: rgba(255, 255, 255, .5);
+    font-size: 2rem;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    padding: 1pc 0;
+}
+
+.scoreboard{
+    width: max-content;
+    padding: 2pc;
+    border: 2px solid white;
+    margin: 2pc auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scoreboard span{
+    padding: 0 2pc;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.playerScore{
+    border-right: 1px solid white;
+    position: relative;
+}
+
+.compScore{
+    border-left: 1px solid white;
+    position: relative;
+}
+
+.playerScore::before{
+    content: 'Player';
+    position: absolute;
+    font-size: 16px;
+    left: -4.5pc;
+    color: black;
+    background: white;
+    border-radius: 1pc;
+    padding: 5%;
+}
+
+.compScore::before{
+    content: 'comp';
+    position: absolute;
+    font-size: 16px;
+    right: -4.5pc;
+    color: black;
+    background: white;
+    border-radius: 1pc;
+    padding: 5%;
+}
+
+.container{
+    margin-top: 5pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2pc;
+    flex-wrap: wrap;
+}
+
+.container div{
+    background-color: white;
+    padding: 3pc;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.container div:hover{
+    cursor: pointer;
+    background-color: #c9c9c9a1;
+}
+
+.hero{
+    margin-top: 3pc;
+    text-align: center;
+    font-size: clamp(1.5rem,10vw,3rem);
+    color: white;
+}
+
+.displayer{
+    color: gray;
+    background-color: rgba(255, 255, 255, .9);
+    padding: 2pc;
+    border-radius: 20px;
+    width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem,10vw,5rem);
+    transition: .5s;
+}
+
+.displayer button{
+    margin-top: 2pc;
+    padding: 1% 2%;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #2193b0;
+    color: white;
+    transition: .3S;
+}
+
+.displayer button:hover{
+    background-color: #124855;
+}
+
+.king,
+.thief{
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.thief{
+    color: gray;
+}
+
+.matchWinner{
+    text-align: center;
+}
+
+
+@media (max-width:445px) {
+    html{
+        height: auto;
+    }
+
+    .displayer{
+        height: 100vh;
+    }
+}
